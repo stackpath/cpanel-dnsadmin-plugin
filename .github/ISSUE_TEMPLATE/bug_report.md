@@ -8,7 +8,7 @@ assignees: ''
 ---
 
 **Is this a security issue?**  
-If so, please email this information to [security@stackpath.com](mailto:security@stgackpath.com) 
+If so, please email this information to [security@stackpath.com](mailto:security@stackpath.com) 
 instead of filling out a bug report. 
 
 **Is this an issue with your StackPath account or service?**  
