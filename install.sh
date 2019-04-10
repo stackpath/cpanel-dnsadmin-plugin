@@ -101,8 +101,8 @@ make_directory "${CPANEL_ROOT}/Cpanel/NameServer/Remote/StackPath"
 echo
 echo "Copying files"
 copy_file "${LOCAL_ROOT}/lib/${REMOTE_MODULE}" "${CPANEL_ROOT}/${REMOTE_MODULE}"
-copy_file "${LOCAL_ROOT}/lib/${REMOTE_MODULE}" "${CPANEL_ROOT}/${SETUP_MODULE}"
-copy_file "${LOCAL_ROOT}/lib/${REMOTE_MODULE}" "${CPANEL_ROOT}/${API_MODULE}"
+copy_file "${LOCAL_ROOT}/lib/${SETUP_MODULE}" "${CPANEL_ROOT}/${SETUP_MODULE}"
+copy_file "${LOCAL_ROOT}/lib/${API_MODULE}" "${CPANEL_ROOT}/${API_MODULE}"
 
 # All done!
 echo
