@@ -13,6 +13,7 @@ effort required on your part.
   * [Install the plugin](#install-the-plugin)
   * [Configure the plugin](#configure-the-plugin)
 * [Usage](#usage)
+* [Uninstallation](#uninstallation)
 * [Troubleshooting](#troubleshooting)
 * [Known Issues](#known-issues)
 * [Development](#development)
@@ -84,6 +85,16 @@ your DNS cluster. You can change this information on this screen later.
 
 After installation the plugin automatically sends DNS change to StackPath's DNS 
 backend with no interaction required by the user.
+
+<a name="uninstallation"></a>
+## Uninstallation
+
+1. Copy this project to a temporary directory on your cPanel server.
+2. Execute the `uninstall.sh` script as root. This removes all files and 
+directories installed by the `install.sh` script. 
+
+After the plugin is uninstalled then cPanel will no longer synchronize DNS zone 
+changes with StackPath.
 
 <a name="troubleshooting"></a>
 ## Troubleshooting
