@@ -10,7 +10,6 @@ use warnings;
 
 use Cpanel::JSON::XS;
 use HTTP::Tiny;
-use URL::Encode qw(url_encode_utf8);
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(sp_url);
@@ -185,7 +184,7 @@ sub sp_url {
         my @query_string_parts = ();
 
         while (my ($key, $value) = each %{$query}) {
-            push @query_string_parts, sprintf('%s=%s', url_encode_utf8($key), url_encode_utf8($value));
+            push @query_string_parts, sprintf('%s=%s', Cpanel::Encoder::URI::uri_encode_str($key), Cpanel::Encoder::URI::uri_encode_str($value));
         }
 
         $query_string = sprintf('?%s', join('&', @query_string_parts));
