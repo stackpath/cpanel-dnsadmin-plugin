@@ -5,6 +5,7 @@
 # Remove the plugin's Perl modules from a cPanel installation.
 
 CPANEL_ROOT="/usr/local/cpanel"
+CPANEL_CLUSTER_CONFIG_ROOT="/var/cpanel/cluster/root/config"
 REMOTE_MODULE="Cpanel/NameServer/Remote/StackPath.pm"
 SETUP_MODULE="Cpanel/NameServer/Setup/Remote/StackPath.pm"
 PROJECT_URL="https://github.com/stackpath/cpanel-dnsadmin-plugin"
@@ -57,6 +58,10 @@ echo
 echo "Removing files"
 remove_file "${CPANEL_ROOT}/${REMOTE_MODULE}"
 remove_file "${CPANEL_ROOT}/${SETUP_MODULE}"
+remove_file "${CPANEL_CLUSTER_CONFIG_ROOT}/stackpath"
+remove_file "${CPANEL_CLUSTER_CONFIG_ROOT}/stackpath.cache"
+remove_file "${CPANEL_CLUSTER_CONFIG_ROOT}/stackpath-dnsrole"
+remove_file "${CPANEL_CLUSTER_CONFIG_ROOT}/stackpath-state.json"
 
 # All done!
 echo
