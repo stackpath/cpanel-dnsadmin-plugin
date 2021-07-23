@@ -72,7 +72,8 @@ id in the URL.
    click the "DNS Cluster" link.
 3. Scroll to the "Add a new server to the cluster " box in the "Servers in your 
    DNS cluster" section of the page.
-4. Select "StackPath" in the dropdown box then click "Configure".
+4. Click the "(show all)" link, select "StackPath" in the dropdown box, 
+   then click "Configure".
 5. Enter your StackPath account's API client id, client secret, and the UUID of 
    the stack you would like your zones to appear on in the text fields provided 
    then click "Submit".
@@ -90,8 +91,9 @@ backend with no interaction required by the user.
 ## Uninstallation
 
 1. Copy this project to a temporary directory on your cPanel server.
-2. Execute the `uninstall.sh` script as root. This removes all files and 
-directories installed by the `install.sh` script. 
+2. Execute the `uninstall.sh` script as root. This removes the files and 
+   directories installed by the `install.sh` script and all StackPath DNS cluster 
+   settings files. 
 
 After the plugin is uninstalled then cPanel will no longer synchronize DNS zone 
 changes with StackPath.
